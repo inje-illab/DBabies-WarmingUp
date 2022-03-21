@@ -14,9 +14,9 @@
             "options": {
                 "cwd": "/usr/bin"
             },
-            "problemMatcher": [
+            "problemMatcher": 
                 "$gcc"
-            ],
+            ,
             "group": "build"
         },
         {
@@ -40,7 +40,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "디버거에서 생성된 작업입니다."
+            "detail": "디버거에서 생성된 작업입니다." //ㅇㅇ
         }
     ]
 }
