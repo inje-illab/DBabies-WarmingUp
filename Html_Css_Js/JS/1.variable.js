@@ -47,3 +47,23 @@ const gsymbol1 = Symbol.for('id');
 const gsymbol2 = Symbol.for('id');
 console.log(gsymbol1===gsymbol2)//true
 
+//object, real-life object, data-sstructure
+const ellie = {name :'ellie', age :20}
+console.log(ellie.name);
+console.log(ellie.age);
+
+//Dynamic Typing
+let text = 'hello';
+console.log(text.charAt(0)); //첫 번째 문자를 출력한다.
+console.log(`value : ${text}, type: ${typeof text}`);
+
+text = 1; 
+console.log(`value:${text}, type : ${typeof text}`);
+
+text = '7' + 5;
+console.log(`value: ${text}, type: ${typeof text}`); // 자동으로 string형으로 변환해줌
+
+text = '10' / '5';
+console.log(`value : ${text}, type: ${typeof text}`); //문자로 입력을 받았지만 자동으로 정수로 변환하여 값을 나눈다. 
+//type이 자동으로 number로 바뀐다.
+//console.log(text.charAt(0)); 이것을 다시 호출하면 현재 타입이 정수로 바뀌면서 오류가 발생한다.
