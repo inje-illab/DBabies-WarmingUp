@@ -81,4 +81,3 @@ while(i >0){
 for(i = 3; i >0; i--){
     console.log(i);
 }
-
