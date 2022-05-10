@@ -37,3 +37,51 @@ function printAll(...args){ // ... 을 찍으면 배열 파라미터가 전달
     //위의 반복문은 다 같은 역할
 }
 printAll('dream', 'coding', 'ellie');
+
+//로컬 스콥프
+let globalMessage = "global";
+function printMessage(){
+    let message = "hello";
+    console.log(message);
+    console.log(globalMessage);
+}
+printMessage();
+
+//리턴
+function sum(a,b){
+    return a+b;
+}
+
+const result = sum(1,2)
+console.log(`result: ${result}`);
+console.log(`sum: ${sum(1,2)}`);
+
+//callback
+function randomQuiz(answer, printYes, printNo){
+    if(answer === 'love you'){
+        printYes();
+    }
+    else{
+        printNo();
+    }
+}
+const printYes = function(){ // anonymos function 
+    console.log("yes!");
+};
+const printNo = function print(){//named function
+    console.log("no!");
+};
+
+randomQuiz("wrong", printYes, printNo);
+randomQuiz("love you",printYes,printNo);
+
+//Arrow fuction   =>  
+//블록 없이 함수 정의가 가능하다
+const simplePrint = () => console.log(`simplePrint`);
+const add = (a,b) => a+b;
+
+//IIFE  선언과 동시에 실핼하기
+//  (함수이름)();
+(function hello(){
+    console.log("IIFE");
+})();
